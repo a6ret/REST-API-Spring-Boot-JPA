@@ -19,12 +19,13 @@ public class Product implements Serializable {
     private Long id;
 
     // mengcustom nama kolom dari tbl_product
-    @Column(name = "product_name", length = 100)
+    @Column(name = "product_name", length = 100, nullable = false)
     private String name;
 
-    @Column(name = "product_desc", length = 500)
+    @Column(name = "product_desc", length = 500, nullable = false)
     private String description;
 
+    @Column(nullable = false)
     private double price;
 
     @OneToOne(mappedBy = "product")

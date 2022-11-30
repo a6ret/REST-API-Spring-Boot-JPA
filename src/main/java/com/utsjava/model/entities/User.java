@@ -17,16 +17,16 @@ public class User implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(length = 50, unique = true)
+    @Column(length = 50, unique = true, nullable = false)
     private String username;
 
-    @Column(length = 50)
+    @Column(length = 50, nullable = false)
     private String name;
 
-    @Column(length = 50)
+    @Column(length = 50, nullable = false)
     private String password;
 
-    @Column(length = 10)
+    @Column(length = 10, nullable = false)
     private String role;
 
     @OneToOne(mappedBy = "user")
